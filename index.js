@@ -33,8 +33,9 @@ for (var i = 0 ; i < tables.length; i++) {
         var fields = row.getElementsByTagName("a");
 		for (var j = 0; j < fields.length; j++) {
 		  var field = fields[j];
-		  if (field.getAttribute("class") && field.getAttribute("class") == "art_owner")
+		  if (field.getAttribute("class") && field.getAttribute("class") == "art_owner") {
 			userName = field.getElementsByTagName("strong")[0].innerHTML;
+		  }
 		}
 	} else if (row.getAttribute("class") == "art_b") {
 		bodyDiv = row.getElementsByTagName("td")[0];
